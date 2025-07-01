@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="@JosseVandeputte">
+        <meta name="description" content="Wordle">
+        <link rel="icon" href="/assets/media/jvLogo.ico" type="image/x-icon">
+        <title>Wordle</title>
+        <!-- LINKS -->
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/styleWordle.css">
+        <script src="./assets/js/scriptWordle.js"></script>
+    </head>
+
+    <body>
+        <header class="">
+            <a href="https://www.vdpj.be/en"><img src="./images/jvLogo.png"></a>
+            <nav>
+                <h1>JV Wordle</h1>
+                <!-- settings button, with ligth and darkmode feature -->
+                <!-- <button id="settings">
+                    SETTINGS
+                    <img src="./assets/media/settings.svg">
+                </button> -->
+                <!-- help button, this opens a page with the info about how to play wordle -->
+                <button id="help">
+                    HOW TO PLAY
+                    <img src="./assets/media/help.svg">
+                </button>
+            </nav>
+        </header>
+        <main>
+            <section class="board_container">
+                <!-- 
+                    spel bord 
+                    = 5 letters and 6 rows (chances)
+                -->
+                <div class="board">
+                    <div class="board_rows" id="Row1">
+                        <div class="board_letters" id="Row1" data-key="1"></div>
+                        <div class="board_letters" id="Row1" data-key="2"></div>
+                        <div class="board_letters" id="Row1" data-key="3"></div>
+                        <div class="board_letters" id="Row1" data-key="4"></div>
+                        <div class="board_letters" id="Row1" data-key="5"></div>
+                    </div>
+                    <div class="board_rows" id="Row2">
+                        <div class="board_letters" id="Row2" data-key="1"></div>
+                        <div class="board_letters" id="Row2" data-key="2"></div>
+                        <div class="board_letters" id="Row2" data-key="3"></div>
+                        <div class="board_letters" id="Row2" data-key="4"></div>
+                        <div class="board_letters" id="Row2" data-key="5"></div>
+                    </div>
+                    <div class="board_rows" id="Row3">
+                        <div class="board_letters" id="Row3" data-key="1"></div>
+                        <div class="board_letters" id="Row3" data-key="2"></div>
+                        <div class="board_letters" id="Row3" data-key="3"></div>
+                        <div class="board_letters" id="Row3" data-key="4"></div>
+                        <div class="board_letters" id="Row3" data-key="5"></div>
+                    </div>
+                    <div class="board_rows" id="Row4">
+                        <div class="board_letters" id="Row4" data-key="1"></div>
+                        <div class="board_letters" id="Row4" data-key="2"></div>
+                        <div class="board_letters" id="Row4" data-key="3"></div>
+                        <div class="board_letters" id="Row4" data-key="4"></div>
+                        <div class="board_letters" id="Row4" data-key="5"></div>
+                    </div>
+                    <div class="board_rows" id="Row5">
+                        <div class="board_letters" id="Row5" data-key="1"></div>
+                        <div class="board_letters" id="Row5" data-key="2"></div>
+                        <div class="board_letters" id="Row5" data-key="3"></div>
+                        <div class="board_letters" id="Row5" data-key="4"></div>
+                        <div class="board_letters" id="Row5" data-key="5"></div>
+                    </div>
+                    <div class="board_rows" id="Row6">
+                        <div class="board_letters" id="Row6" data-key="1"></div>
+                        <div class="board_letters" id="Row6" data-key="2"></div>
+                        <div class="board_letters" id="Row6" data-key="3"></div>
+                        <div class="board_letters" id="Row6" data-key="4"></div>
+                        <div class="board_letters" id="Row6" data-key="5"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="keyboard">
+                <div class="keyboard_rows">
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="q">q</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="w">w</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="e">e</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="r">r</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="t">t</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="y">y</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="u">u</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="i">i</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="o">o</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="p">p</button>
+                </div>
+                <div class="keyboard_rows">
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="a">a</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="s">s</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="d">d</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="f">f</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="g">g</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="h">h</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="j">j</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="k">k</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="l">l</button>
+                </div>
+                <div class="keyboard_rows">
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="enter">enter</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="z">z</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="x">x</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="c">c</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="v">v</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="b">b</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="n">n</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="m">m</button>
+                    <button type="button" class="keyboard_letters keyboard_letters_hover" data-key="delete">
+                        <img src="./assets/media/delete.svg">
+                    </button>
+            </section>
+            <div id="information" class="info">
+                <div class="info-content">
+                    <span class="close">&times;</span>
+                    <h1>How to play Wordle:</h1>
+                    <ol>
+                        <li>Guess a 5-letter word.</li>
+                        <li>Green squares indicate correct letters in the correct position.</li>
+                        <li>Yellow squares indicate correct letters in the wrong position.</li>
+                        <li>Gray squares indicate incorrect letters.</li>
+                        <li>You have 6 attempts to guess the word.</li>
+                    </ol>
+                </div>
+            </div>
+            <div id="endGame" class="info">
+                <div class="info-content">
+                    <span id="closeEnd" class="close">&times;</span>
+                    <h1 id="endGameMessage"></h1>
+                    <button id="playAgain">Play Again</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
